@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: zeno-forward-bot
+    runtime: docker
+    repo: https://github.com/YOUR_USERNAME/zeno-forward-bot
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: YOUR_USER_ID
+        value: "7406197326"
+      - key: TARGET_CHANNEL_ID
+        value: "-1003120043320"
+      - key: TARGET_CHANNEL_USERNAME
+        value: "@animethic2"
+      - key: YOUR_WEBSITE
+        value: "www.animethic.xyz"
+    healthCheckPath: /
+    autoDeploy: true
